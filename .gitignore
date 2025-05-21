@@ -1,6 +1,10 @@
 
 
 ## Python gitignore contents
+/bin
+/lib
+pyvenv.cfg
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
