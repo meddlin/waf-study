@@ -1,5 +1,6 @@
 # server.py
 from http.server import BaseHTTPRequestHandler, HTTPServer
+from rich import print
 
 class SimpleHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -17,7 +18,7 @@ class SimpleHandler(BaseHTTPRequestHandler):
 def run(server_class=HTTPServer, handler_class=SimpleHandler, port=8080):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
-    print(f'Server running at http://localhost:{port}/')
+    print(f':sparkle: Server running at [blue] http://localhost:{port}/ [/blue]')
     httpd.serve_forever()
 
 if __name__ == '__main__':
